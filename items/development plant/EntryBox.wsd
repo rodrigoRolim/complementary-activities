@@ -1,0 +1,10 @@
+@startuml
+Class Documento {
+ integer id
+ String name
+ Date create
+ void addDocument()
+}
+Documento - Grupo: pertence >
+BoxEntry o-- Documento: contem >
+@enduml
