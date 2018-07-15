@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ <title>Document</title>
+ <style>
+   span {
+     border: 1px solid;
+     padding: 5px;
+   }
+   #entry-box{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+   }
+   .pagination {
+     padding-top: 20px;
+     width: 20%;
+     align-self: center;
+     margin: 0 auto;
+   }
+  .table{
+   width: 60%;
+   margin: 0 auto;
+   padding: 50px 0;
+  }
+  table{
+    font-family: arial, sans-serif;
+    font-size: 0.95rem;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  td, th {
+   text-align: left;
+   padding: 8px;
+  }
+  tbody tr {
+   border-bottom: 1px solid #dddddd;
+  }
+  td:hover{
+   cursor: pointer;
+  }
+
+  tbody {
+   margin-top: 20px;
+  }
+ </style>
+</head>
+<body>
+ <div id="entry-box">
+  <div class="table">
+   <table id="app">
+    <thead>
+     <tr>
+      <th>Aluno</th>
+      <th>Qtd. de documentos</th>
+      <th>Data</th>
+     </tr>
+    </thead>
+    <tbody  v-for="sender in senderList">
+     <tr v-key:sender.id title="visualizar">
+       <td>{{sender.name}}</td>
+       <td>{{sender.quantity}}</td>
+       <td>{{sender.data}}</td>
+     </tr>
+    </tbody>
+   </table>
+   <div class="pagination">
+     <span>&#10094;</span>
+     <span>1</span>
+     <span>2</span>
+     <span>&#10095;</span>
+   </div>
+ </div>
+</body>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      senderList: [
+        {id: 0, name: 'rodrigo rolim veras', quantity: 5, data: '4 de julho'},
+        {id: 1, name: 'junior luis nogueira', quantity: 8, data: '7 de julho'},
+        {id: 2, name: 'roniele figuereido', quantity: 10, data: '9 de agosto'},
+        {id: 3, name: 'michael jackson', quantity: 11, data: '12 de novembro'}
+      ]
+    }
+  })
+</script>
+</html>
