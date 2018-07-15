@@ -57,6 +57,7 @@
      <tr>
       <th>Aluno</th>
       <th>Qtd. de documentos</th>
+      <th>Progresso</th>
       <th>Data</th>
      </tr>
     </thead>
@@ -64,6 +65,7 @@
      <tr v-key:sender.id title="visualizar">
        <td>{{sender.name}}</td>
        <td>{{sender.quantity}}</td>
+       <td>{{sender.score}}</td>
        <td>{{sender.data}}</td>
      </tr>
     </tbody>
@@ -81,10 +83,10 @@
     el: '#app',
     data: {
       senderList: [
-        {id: 0, name: 'rodrigo rolim veras', quantity: 5, data: '4 de julho'},
-        {id: 1, name: 'junior luis nogueira', quantity: 8, data: '7 de julho'},
-        {id: 2, name: 'roniele figuereido', quantity: 10, data: '9 de agosto'},
-        {id: 3, name: 'michael jackson', quantity: 11, data: '12 de novembro'}
+        {id: 0, name: 'rodrigo rolim veras', quantity: 5, score: '50%', data: '4 de julho'},
+        {id: 1, name: 'junior luis nogueira', quantity: 8, score: '50%', data: '7 de julho'},
+        {id: 2, name: 'roniele figuereido', quantity: 10, score: '40%', data: '9 de agosto'},
+        {id: 3, name: 'michael jackson', quantity: 11, score: '60%', data: '12 de novembro'}
       ]
     }
   })
