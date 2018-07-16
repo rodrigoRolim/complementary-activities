@@ -4,6 +4,4 @@ Requisitos funcionais relativos ao item SenderList
 
 **Data:**   16/07/2018
 
-**Versão:** 1
-
 **ID:**     RF_SenderList_001
