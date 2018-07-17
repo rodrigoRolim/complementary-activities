@@ -5,9 +5,11 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta http-equiv="X-UA-Compatible" content="ie=edge">
  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
  <title>Document</title>
  <style>
-   span {
+   .pagination span {
      border: 1px solid;
      padding: 5px;
    }
@@ -55,39 +57,66 @@
     width: 100%;
     padding: 8px 7px;
   }
+  .header {
+    background-color: rgb(133, 241, 227);
+    padding: 5px 0px;
+    display: flex;
+    flex-direction: column;
+  }
+  body{
+    margin: 0;
+    padding: 0;
+  }
+  .logo {
+    align-self: flex-end;
+    border: 1px solid transparent;
+    background-color: antiquewhite;
+    border-radius: 100%;
+    padding: 25px 25px;
+    margin-right: 100px;
+  }
  </style>
 </head>
 <body>
- <div id="entry-box">
-   <div class="search-sender">
-     <input type="text" placeholder="buscar aluno por nome">
-   </div>
-  <div class="table">
-   <table id="app">
-    <thead>
-     <tr>
-      <th>Aluno</th>
-      <th>Qtd. de documentos</th>
-      <th>Progresso</th>
-      <th>Data</th>
-     </tr>
-    </thead>
-    <tbody  v-for="sender in senderList">
-     <tr v-key:sender.id title="visualizar">
-       <td>{{sender.name}}</td>
-       <td>{{sender.quantity}}</td>
-       <td>{{sender.score}}</td>
-       <td>{{sender.data}}</td>
-     </tr>
-    </tbody>
-   </table>
-   <div class="pagination">
-     <span>&#10094;</span>
-     <span>1</span>
-     <span>2</span>
-     <span>&#10095;</span>
-   </div>
- </div>
+  <nav class="header">
+    <span class="logo"></span>
+
+  </nav>
+  <div class="container">
+      <div id="entry-box">
+          <div class="search-sender">
+            <input type="text" placeholder="buscar aluno por nome">
+          </div>
+         <div class="table">
+          <table id="app">
+           <thead>
+            <tr>
+             <th>Aluno</th>
+             <th>Qtd. de documentos</th>
+             <th>Progresso</th>
+             <th>Data</th>
+            </tr>
+           </thead>
+           <tbody  v-for="sender in senderList">
+            <tr v-key:sender.id title="visualizar">
+              <td>{{sender.name}}</td>
+              <td>{{sender.quantity}}</td>
+              <td>{{sender.score}}</td>
+              <td>{{sender.data}}</td>
+            </tr>
+           </tbody>
+          </table>
+          <div class="pagination">
+            <span>&#10094;</span>
+            <span>1</span>
+            <span>2</span>
+            <span>&#10095;</span>
+          </div>
+        </div>
+  </div>
+  <footer>
+    <p>eu sou o rodape</p>
+  </footer>
 </body>
 <script>
   var app = new Vue({
