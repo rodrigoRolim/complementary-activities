@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+ <title>Document</title>
+ <style>
+   .pagination span {
+     border: 1px solid rgba(133, 198, 241, 0.692);
+     padding: 5px 10px;
+     color: rgba(21, 116, 179, 0.692);
+   }
+   #entry-box{
+     width: 70%;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-end;
+     margin: 0 auto;
+     
+   }
+   .pagination {
+     padding-top: 20px;
+     width: 20%;
+     align-self: center;
+     margin: 0 auto;
+   }
+  .table{
+   width: 100%;
+   margin: 0 auto;
+   padding: 50px 0;
+  }
+  table{
+    font-family: arial, sans-serif;
+    font-size: 0.95rem;
+    border-collapse: collapse;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  td, th {
+   text-align: left;
+   padding: 8px;
+  }
+  tbody tr {
+   border-bottom: 1px solid rgba(133, 198, 241, 0.692);
+  }
+  td:hover{
+   cursor: pointer;
+  }
+  tbody {
+   margin-top: 20px;
+  }
+  .search-sender input {
+    border-radius: 4px;
+    border: 1px solid rgba(133, 198, 241, 0.692);
+    width: 100%;
+    padding: 8px 7px;
+  }
+  .header {
+    border-bottom: 1px solid rgba(133, 198, 241, 0.692);
+    line-height: 1;
+    background-color: rgb(255, 255, 255);
+    padding: 8px 0px;
+    display: flex;
+    flex-direction: row;
+  }
+  body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  .painel {
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    align-self: flex-end;
+    margin-right: 25px;
+  }
+  .logo {
+    border: 1px solid;
+    border-radius: 100%;
+    padding: 25px;
+    align-self: center;
+  }
+  .menu {
+    align-self: center;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+  }
+
+  .not, .fol {
+    color: 	rgba(0, 119, 255, 0.986);  
+    cursor: pointer;
+  }
+  .not {
+    margin-right: 10px;
+  }
+  .fol {
+    margin-left: 10px;
+  }
+  .not .material-icons, .fol .material-icons {
+    color: rgb(133, 198, 241);
+    font-size: 1.5rem;
+  }
+  .logout {
+   align-self: center;
+   width: 80%;
+  }
+  .logout button {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 8px;
+    margin-left: 100px;
+    background-color:#f03a685e;
+    border: 1px solid #f03a67; 
+    color: white;
+    border-radius: 4px;
+  }
+  .rot-logout {
+    align-self: center;
+  }
+  footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 10px 0px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(196, 192, 192, 0.01);
+    padding: 78px 0;
+    align-items: center;
+  }
+
+ </style>
+</head>
+<body>
+  <nav class="header">
+    <div class="logout">
+        <button>
+          <i class="material-icons">
+            exit_to_app
+          </i> <span class="rot-logout">Logout</span>
+        </button>
+    </div>
+    <div class="painel">
+      <div class="menu">
+          <span class="not">
+            <i class="material-icons">
+              notifications_none
+            </i>
+          </span>
+          <span class="fol">
+            <i class="material-icons">
+                folder_open
+            </i>
+          </span>
+      </div>
+      <span class="logo"></span>
+    </div>
+  </nav>
+  <div class="container">
+   <div class="progress">
+    <img src="./img/progress_1.png" alt="progresso do grupo 1">
+    <img src="./img/progress_2.png" alt="progresso do grupo 2">
+    <img src="./img/progress_3.png" alt="progresso do grupo 3">
+   </div>
+   <div class="documents">
+    
+   </div> 
+  </div>
+  <footer>
+    <p>eu sou o rodape</p>
+  </footer>
+</body>
+<script>
+  var app = new Vue({
+    el: '#app',
+    data: {
+      senderList: [
+        {id: 0, name: 'rodrigo rolim veras', quantity: 5, score: '50%', data: '4 de julho'},
+        {id: 1, name: 'junior luis nogueira', quantity: 8, score: '50%', data: '7 de julho'},
+        {id: 2, name: 'roniele figuereido', quantity: 10, score: '40%', data: '9 de agosto'},
+        {id: 3, name: 'michael jackson', quantity: 11, score: '60%', data: '12 de novembro'},
+        {id: 2, name: 'roniele figuereido', quantity: 10, score: '40%', data: '9 de agosto'},
+        {id: 3, name: 'michael jackson', quantity: 11, score: '60%', data: '12 de novembro'}
+      ]
+    }
+  })
+  var documents = new vue({
+    el: '.documents'
+  })
+</script>
+</html>
