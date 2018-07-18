@@ -22,7 +22,11 @@ Class Group {
  integer id
  String name
 }
+Class GroupPersistency {
+  void crud()
+}
 Document - Group: belong >
+GroupPersistency -- Group
 DocumentPersistency ..> Document
 Document -- Student: association >
 StudentPersistency ...> Student
