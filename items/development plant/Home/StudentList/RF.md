@@ -9,7 +9,7 @@ Requisitos funcionais relativos ao item SenderList
 
 **Título:** Caixa de remetentes
 
-**ID:**     RF_SenderList_001
+**ID:**     RF_StudentList_001
 
 ### Descrição
 
