@@ -1,10 +1,21 @@
 @startuml
-Class Documento {
+Class Document {
  integer id
  String name
  Date create
- void addDocument()
+ Group group
+ Student student
 }
-Documento - Grupo: pertence >
-BoxEntry o-- Documento: contem >
+Class DocumentPersistency {
+ Document Document
+}
+Class Student{
+ integer ra
+ String name
+ String email
+ String password
+}
+Document - Group: belong >
+DocumentPersistency o-- Document: contain >
+Document - Student: association >
 @enduml
