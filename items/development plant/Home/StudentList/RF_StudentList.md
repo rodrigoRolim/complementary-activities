@@ -13,7 +13,7 @@ Requisitos funcionais relativos ao item SenderList
 
 ### Descrição
 
-> O sistema deve exibir uma tabela com uma lista de registros dos alunos que enviaram documentos ao professor responsável;
+> O sistema deve exibir uma lista de registros dos alunos que enviaram documentos ao professor responsável para o professor responsável;
 
 > O registro deve ter as seguintes informações:
  > * nome do aluno;
