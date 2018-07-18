@@ -7,7 +7,7 @@ Class Document {
  Student student
 }
 Class DocumentPersistency {
- Document Document
+ void crud()
 }
 Class Student{
  integer ra
@@ -15,7 +15,15 @@ Class Student{
  String email
  String password
 }
+Class StudentPersistency {
+  void crud()
+}
+Class Group {
+ integer id
+ String name
+}
 Document - Group: belong >
-DocumentPersistency o-- Document: contain >
-Document - Student: association >
+DocumentPersistency ..> Document
+Document -- Student: association >
+StudentPersistency ...> Student
 @enduml
