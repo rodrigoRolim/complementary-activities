@@ -13,4 +13,4 @@ Requisitos funcionais relativos ao item Pagination
 
 ### Descrição
 
-> O sistema deve permitir que o professor responsável possa navegar por entre os registros exibidos na lista de registros do componente StudentList;
+> O sistema deve permitir que o professor responsável possa navegar por entre os registros exibidos na lista de registros do componente StudentList.
