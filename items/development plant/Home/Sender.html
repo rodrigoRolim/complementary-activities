@@ -81,7 +81,7 @@
     margin-right: 25px;
   }
   .logo {
-    border: 1px solid;
+    border: 1px solid #77dd77;
     border-radius: 100%;
     padding: 25px;
     align-self: center;
@@ -131,7 +131,7 @@
     padding: 10px 0px; 
   }
   .container {
-    background-color: rgba(196, 192, 192, 0.01);
+    background-color: rgba(196, 192, 192, 0.03);
     padding: 78px 0;
   }
 
@@ -177,8 +177,8 @@
              <th>Data</th>
             </tr>
            </thead>
-           <tbody  v-for="sender in senderList">
-            <tr v-key:sender.id title="visualizar">
+           <tbody>
+            <tr v-key:sender.id title="visualizar" v-for="sender in senderList">
               <td>{{sender.name}}</td>
               <td>{{sender.quantity}}</td>
               <td>{{sender.score}}</td>
