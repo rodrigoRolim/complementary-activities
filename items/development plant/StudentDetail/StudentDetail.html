@@ -81,7 +81,7 @@
     margin-right: 25px;
   }
   .logo {
-    border: 1px solid;
+    border: 1px solid #77dd77;
     border-radius: 100%;
     padding: 25px;
     align-self: center;
@@ -105,8 +105,14 @@
     margin-left: 10px;
   }
   .not .material-icons, .fol .material-icons {
-    color: rgb(133, 198, 241);
+   
     font-size: 1.5rem;
+  }
+  .fol .material-icons {
+    color: rgb(133, 198, 241);
+  }
+  .not  .material-icons {
+    color: rgb(241, 225, 133);
   }
   .logout {
    align-self: center;
@@ -133,11 +139,72 @@
   .container {
     display: flex;
     flex-direction: column;
-    background-color: rgba(196, 192, 192, 0.01);
+    background-color: rgba(196, 192, 192, 0.03);
     padding: 78px 0;
     align-items: center;
   }
-
+  .documents {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column; 
+  }
+  .documents span {
+    padding: 10px;
+  }
+  .progress {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .progress img {
+    margin:0;
+    padding:0;
+    width: 120px;
+    height: 120px;
+  }
+  .progress img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  .progress img:last-child{
+    margin-left: 50px;
+  }
+  figure {
+    display: flex;
+    flex-direction: column;
+    margin:20px;
+  }
+  figure figcaption {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+  
+  }
+  a {
+    text-decoration: none;
+  }
+  .foto {
+    width: 75px;
+    height: 98px;
+    border: 1px solid  rgba(0,0,0,.7);;
+  }
+  .perfil-aluno {
+    align-self: flex-start;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: row;
+    
+  }
+  .informations {
+    vertical-align: center;
+    margin-left: 20px;
+    padding: 0;
+    color: rgba(0,0,0,.7);
+    border-radius: 4px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
  </style>
 </head>
 <body>
@@ -158,7 +225,7 @@
           </span>
           <span class="fol">
             <i class="material-icons">
-                folder_open
+              folder_open
             </i>
           </span>
       </div>
@@ -166,35 +233,50 @@
     </div>
   </nav>
   <div class="container">
-   <div class="progress">
-    <img src="./img/progress_1.png" alt="progresso do grupo 1">
-    <img src="./img/progress_2.png" alt="progresso do grupo 2">
-    <img src="./img/progress_3.png" alt="progresso do grupo 3">
+    <div class="perfil-aluno">
+      <div class="foto">
+        <span></span>
+      </div>
+      <div class="informations">
+        <p><strong>nome:</strong> <span>rodrigo rolim veras</span></p>
+        <p><strong>ra:</strong> <span>1694111</span></p>
+        <p><strong>curso:</strong> <span>engenharia de software</span></p>
+      </div>
+    </div>
+    <div class="progress">
+     <figure>
+        <img src="./img/progress_1.png" alt="progresso do grupo 1">
+        <figcaption><a href="#"><strong>Grupo 1:</strong> 20 pontos</a></figcaption>
+     </figure>
+     <figure>
+        <img src="./img/progress_2.png" alt="progresso do grupo 2">
+        <figcaption><a href="#"><strong>Grupo 2:</strong> 30 pontos</a></figcaption>
+     </figure>
+     <figure>
+        <img src="./img/progress_3.png" alt="progresso do grupo 3">
+        <figcaption><a href="#"><strong>Grupo 3:</strong> 40 pontos</a></figcaption>
+     </figure>
+     <figure>
+        <img src="./img/total.png" alt="progresso total">
+        <figcaption><a href="#"><strong>Total:</strong> 70 pontos</a></figcaption>
+     </figure> 
    </div>
-   <div class="documents">
-    
-   </div> 
   </div>
   <footer>
     <p>eu sou o rodape</p>
   </footer>
 </body>
 <script>
-  var app = new Vue({
-    el: '#app',
+  var documents = new Vue({
+    el: '.container',
     data: {
-      senderList: [
-        {id: 0, name: 'rodrigo rolim veras', quantity: 5, score: '50%', data: '4 de julho'},
-        {id: 1, name: 'junior luis nogueira', quantity: 8, score: '50%', data: '7 de julho'},
-        {id: 2, name: 'roniele figuereido', quantity: 10, score: '40%', data: '9 de agosto'},
-        {id: 3, name: 'michael jackson', quantity: 11, score: '60%', data: '12 de novembro'},
-        {id: 2, name: 'roniele figuereido', quantity: 10, score: '40%', data: '9 de agosto'},
-        {id: 3, name: 'michael jackson', quantity: 11, score: '60%', data: '12 de novembro'}
+      documents: [
+        {id: 0, name: 'atividade 1', binary: ''},
+        {id: 1, name: 'atividade 1', binary: ''},
+        {id: 2, name: 'atividade 1', binary: ''},
+        {id: 3, name: 'atividade 1', binary: ''}
       ]
     }
-  })
-  var documents = new vue({
-    el: '.documents'
   })
 </script>
 </html>
