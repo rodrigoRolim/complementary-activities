@@ -1,4 +1,4 @@
-Requisitos funcionais relativos ao item SenderList
+Requisitos funcionais do item *SenderList*
 =========================================
 
 **Autor:**  Rodrigo Rolim Veras
@@ -13,4 +13,14 @@ Requisitos funcionais relativos ao item SenderList
 
 ### Descrição
 
-> O sistema deve exibir uma lista de registros dos alunos que enviaram documentos ao professor responsável para o professor responsável;
+> O sistema deve exibir uma lista de registros dos alunos que enviaram documentos ao professor responsável para o professor responsável
+
+----
+
+**Título:** Exibição de somente alunos ainda não aprovados na disciplina de atividades complementares
+
+**ID:**     RF_StudentDetail_002
+
+### Descrição
+
+>  O sistema deve filtrar a lista de alunos remetentes exibidas ao professor daqueles que já foram aprovados na disciplina de atividades complementares
