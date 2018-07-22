@@ -23,4 +23,4 @@ Requisitos funcionais do item *SenderList*
 
 ### Descrição
 
->  O sistema deve diferenciar os registros da lista de alunos remetentes exibidas ao professor daqueles que já foram aprovados na disciplina de atividades complementares dos que ainda não foram aprovados.
+>  O sistema deve diferenciar os registros da lista de alunos remetentes exibidas ao professor daqueles que já foram aprovados na disciplina de atividades complementares dos que ainda não foram aprovados até então.
