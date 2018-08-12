@@ -1,0 +1,16 @@
+@startuml
+Class Student {
+}
+Class Document {
+}
+Class Progress{
+
+}
+Class Group {
+
+}
+Student -- Progress
+Group -- Document
+Progress -- Document
+Student -- Document
+@enduml
