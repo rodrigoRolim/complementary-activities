@@ -14,11 +14,10 @@
      padding: 5px 10px;
      color: rgb(126, 127, 128);
    }
-   #entry-box{
+   #entry-box {
      width: 70%;
      display: flex;
      flex-direction: column;
-     align-items: flex-end;
      margin: 0 auto;
      padding: 20px;
      background-color: white;
@@ -35,7 +34,7 @@
    margin: 0 auto;
    padding: 50px 0;
   }
-  table{
+  table {
     font-family: arial, sans-serif;
     font-size: 0.95rem;
     border-collapse: collapse;
@@ -58,7 +57,31 @@
   tbody {
    margin-top: 20px;
   }
+  .header-table, .footer-table {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+  }
+  .header-table { 
+
+  }
+  .footer-table { 
+
+    z-index: 1;
+  }
+  .student-detail {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+  }
   .search-sender {
+    align-self: flex-end;
     width: 25%;
     display: flex;
     flex-direction: row;
@@ -77,7 +100,7 @@
     display: flex;
     flex-direction: row;
   }
-  body{
+  body {
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -240,6 +263,18 @@
     position: absolute;
     z-index: 1;
   }
+  .photo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.0rem;
+    color: gray;
+    border: 1px solid;
+    padding: 30px;
+    border-radius: 100%;
+    margin-right: 10px;
+  }
+  .photo p {
+    color: gray;
+  }
  </style>
 </head>
 <body>
@@ -268,10 +303,16 @@
     </div>
   </nav>
   <div class="container">
-    <div id="entry-box">
+    <div class="header-table">
+      <div class="student-detail">
+        <span class="photo"></span>
+        <p>rodrigo rolim veras</p>
+      </div>
       <div class="search-sender">
         <input type="text" placeholder="buscar">
       </div>
+    </div>
+    <div id="entry-box">    
       <div class="table">
         <table id="app">
           <thead>
@@ -300,14 +341,14 @@
           </tbody>
         </table>
       </div>
-      <div class="footer-table">
-        <div class="pagination">
-          <span>&#10094;</span>
-          <span>1</span>
-          <span>2</span>
-          <span>3</span>
-          <span>&#10095;</span>
-        </div>
+    </div>
+    <div class="footer-table">
+      <div class="pagination">
+        <span>&#10094;</span>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>&#10095;</span>
       </div>
     </div>
   </div>
