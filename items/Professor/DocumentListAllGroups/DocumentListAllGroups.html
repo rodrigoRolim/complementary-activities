@@ -10,9 +10,9 @@
  <title>Document</title>
  <style>
    .pagination span {
-     border: 1px solid rgba(133, 198, 241, 0.692);
+     border: 1px solid rgba(126, 127, 128, 0.863);
      padding: 5px 10px;
-     color: rgba(21, 116, 179, 0.692);
+     color: rgb(126, 127, 128);
    }
    #entry-box{
      width: 70%;
@@ -20,7 +20,9 @@
      flex-direction: column;
      align-items: flex-end;
      margin: 0 auto;
-     
+     padding: 20px;
+     background-color: white;
+     box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2)
    }
    .pagination {
      padding-top: 20px;
@@ -45,7 +47,10 @@
    padding: 8px;
   }
   tbody tr {
-   border-bottom: 1px solid rgba(133, 198, 241, 0.692);
+   border-bottom: 1px solid rgba(126, 127, 128, 0.281);
+  }
+  tbody tr:hover {
+    background-color: #cbcccb0e;
   }
   td:hover{
    cursor: pointer;
@@ -53,9 +58,14 @@
   tbody {
    margin-top: 20px;
   }
+  .search-sender {
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+  }
   .search-sender input {
     border-radius: 4px;
-    border: 1px solid rgba(133, 198, 241, 0.692);
+    border: 1px solid #8d928d;
     width: 100%;
     padding: 8px 10px;
   }
@@ -81,7 +91,7 @@
     margin-right: 25px;
   }
   .logo {
-    border: 1px solid #77dd77;
+    border: 1px solid #8d928d;
     border-radius: 100%;
     padding: 25px;
     align-self: center;
@@ -167,7 +177,7 @@
     transform: scale(1.2);
     cursor: pointer;
   }
-  .progress img:last-child{
+  .progress img:last-child {
     margin-left: 50px;
   }
   figure {
@@ -180,7 +190,6 @@
     margin-top: 25px;
     font-size: 0.8rem;
     font-family: Arial, Helvetica, sans-serif;
-  
   }
   a {
     text-decoration: none;
@@ -190,12 +199,11 @@
     height: 98px;
     border: 1px solid  rgba(0,0,0,.7);;
   }
-  .perfil-aluno {
+  .perfil-student {
     align-self: flex-start;
     margin-left: 100px;
     display: flex;
     flex-direction: row;
-    
   }
   .informations {
     vertical-align: center;
@@ -260,27 +268,15 @@
     </div>
   </nav>
   <div class="container">
-    <div class="name-group">
-        <h3>Grupo 1</h3>
-    </div>
-    <div class="perfil-aluno">
-        <div class="foto">
-          <span></span>
-        </div>
-        <div class="informations">
-          <p><strong>nome:</strong> <span>rodrigo rolim veras</span></p>
-          <p><strong>ra:</strong> <span>1694111</span></p>
-          <p><strong>curso:</strong> <span>engenharia de software</span></p>
-        </div>
-    </div>
     <div id="entry-box">
       <div class="search-sender">
-        <input type="text" placeholder="buscar por nome do documento">
+        <input type="text" placeholder="buscar">
       </div>
      <div class="table">
       <table id="app">
        <thead>
         <tr>
+         <th>Aluno</th>
          <th>Nome</th>
          <th>Grupo</th>
          <th>Ítem</th>
@@ -290,6 +286,7 @@
        </thead>
        <tbody>
         <tr v-key:document.id  v-for="document in documents">
+          <td>{{document.student}}</td>
           <td>{{document.name}}</td>
           <td>{{document.group}}</td>
           <td>
@@ -302,17 +299,17 @@
           <td>{{document.period}}</td>
           <td>{{document.score}}</td>
         </tr>
-     
        </tbody>
       </table>
-      <div class="pagination">
+    </div>
+    <div class="pagination">
         <span>&#10094;</span>
         <span>1</span>
         <span>2</span>
+        <span>3</span>
         <span>&#10095;</span>
       </div>
     </div>
-  </div>
   </div>
   <footer>
     <p>eu sou o rodape</p>
@@ -323,14 +320,14 @@
     el: '#app',
     data: {
       documents: [
-        {id: 0, name: 'rotaract', item: 'I', group: 2, period: '2 semes.', score: 4},
-        {id: 1, name: 'atividade group 1', group: 1, period: '3 semes.', item: 'I', score: 5},
-        {id: 2, name: 'atividade esportiva', group: 3, period: '4 semes.', item: 'II', score: 4},
-        {id: 3, name: 'música', group: 1, period: '2 horas', item: 'III', score: 5},
-        {id: 4, name: 'teatro', group: 2, period: '18 horas', item: 'III', score: 4},
-        {id: 5, name: 'ouros da casa', group: 3, period: '5 semes', item: 'I', score: 5},
-        {id: 6, name: 'iniciação cientifica', group: 2, period: '6 semes', item: 'II', score: 4},
-        {id: 7, name: 'atividade 8', group: 1, period: '60 horas', item: 'III', score: 5}
+        {id: 0, student:'a1694111', name: 'rotaract', item: 'I', group: 2, period: '2 semes.', score: 4},
+        {id: 1, student:'a169434', name: 'atividade group 1', group: 1, period: '3 semes.', item: 'I', score: 5},
+        {id: 2, student:'a167434', name: 'atividade esportiva', group: 3, period: '4 semes.', item: 'II', score: 4},
+        {id: 3, student:'a169434', name: 'música', group: 1, period: '2 horas', item: 'III', score: 5},
+        {id: 4, student:'a1694111', name: 'teatro', group: 2, period: '18 horas', item: 'III', score: 4},
+        {id: 5, student:'a1694156', name: 'ouros da casa', group: 3, period: '5 semes', item: 'I', score: 5},
+        {id: 6, student:'a1994111', name: 'iniciação cientifica', group: 2, period: '6 semes', item: 'II', score: 4},
+        {id: 7, student:'a169434', name: 'atividade 8', group: 1, period: '60 horas', item: 'III', score: 5}
       ]
     }
   })
