@@ -26,14 +26,20 @@
   }
   .actions-nav button {
     padding: 10px 8px;
-    border: 1px solid #3A32D9;
-    background-color: rgba(63, 106, 170, 0.801);
     border-radius: 2px;
-    color: white;
     font-weight: 400;
     cursor: pointer;
   }
   .entry {
+    border: 1px solid #3A32D9;
+    background-color: rgba(63, 106, 170, 0.801);
+    color: white;
+    font-weight: 500;
+  }
+  .home {
+    background-color: white;
+    color: blue;
+    border: 1px solid blue;
     margin-right: 10px;
   }
   body {
@@ -46,7 +52,7 @@
    display: flex;
    flex-direction: row;
    justify-content: center;
-   padding: calc(30vh/2) 0;
+   padding: calc(20vh/2) 0;
    width: 100%;
   }
   .form-login {
@@ -77,7 +83,9 @@
    align-items: baseline;
    justify-content: flex-end;
   }
-  .form-row-name .input-label {
+  .form-row-name .input-label,
+  .form-row-course .input-label,
+  .form-row-password .input-label {
    width: 45%;
   }
   .input-label {
@@ -89,7 +97,7 @@
   .input-label {
    width: 100%;
   }
-  input {
+  input, select {
    border: 1px solid rgb(180, 179, 179);
    border-radius: 2px;
    padding: 10px 10px;
@@ -115,8 +123,8 @@
 <body>
   <nav class="header">
    <div class="actions-nav">
-    <button class="entry">cadastrar</button>
-    <button>entrar</button>
+    <button class="home">home</button>
+    <button class="entry">entrar</button>
    </div>
   </nav>
  <div class="container-login" id="login">
@@ -137,15 +145,33 @@
       <input type="email" name="email" id="email"/>
      </div>
    </div>
+   <div class="form-row-course">
+     <div class="input-label">
+       <label for="course">curso</label>
+       <select name="course" id="couse">
+         <option value="id_eng">engenharia de software</option>
+         <option value="id_eng_cop">engenharia de computação</option>
+         <option value="id_ana">análise de sistemas</option>
+         <option value="id_mathematics">matematica</option>
+       </select>
+     </div>
+     <div class="input-label">
+       <label for="ra">Registro Acadêmico</label>
+       <input type="text" name="ra" id="ra"/>
+     </div>
+   </div>
    <div class="form-row-password">
     <div class="input-label">
       <label for="password">senha</label>
       <input type="password" name="password" id="password"/>
      </div>
+     <div class="input-label">
+       <label for="confirm-pass">confirmar senha</label>
+       <input type="text" name="confirm-pass" id="confirm-pass"/>
+     </div>
    </div>
    <div class="form-row">
     <div class="actions">
-      <a href="" class="signin">cadastrar</a>
       <button type="submit">confirmar</button>
      </div>
    </div>
