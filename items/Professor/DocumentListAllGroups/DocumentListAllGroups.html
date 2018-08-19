@@ -272,42 +272,42 @@
       <div class="search-sender">
         <input type="text" placeholder="buscar">
       </div>
-     <div class="table">
-      <table id="app">
-       <thead>
-        <tr>
-         <th>Aluno</th>
-         <th>Nome</th>
-         <th>Grupo</th>
-         <th>Ítem</th>
-         <th>Período</th>
-         <th>Pontos</th>
-        </tr>
-       </thead>
-       <tbody>
-        <tr v-key:document.id  v-for="document in documents">
-          <td>{{document.student}}</td>
-          <td>{{document.name}}</td>
-          <td>{{document.group}}</td>
-          <td>
-           <a  class="item">{{document.item}}</a>
-            <div class="p">
-              <p>item: Atividades esportivas e artisticas</p>
-              <p>pontos por semestre: 5 pontos</p>
-            </div>                  
-          </td>
-          <td>{{document.period}}</td>
-          <td>{{document.score}}</td>
-        </tr>
-       </tbody>
-      </table>
-    </div>
-    <div class="pagination">
-        <span>&#10094;</span>
-        <span>1</span>
-        <span>2</span>
-        <span>3</span>
-        <span>&#10095;</span>
+      <div class="table">
+        <table id="app">
+          <thead>
+            <tr>
+            <th>Nome</th>
+            <th>Grupo</th>
+            <th>Ítem</th>
+            <th>Período</th>
+            <th>Pontos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-key:document.id  v-for="document in documents">
+              <td>{{document.name}}</td>
+              <td>{{document.group}}</td>
+              <td>
+              <a  class="item">{{document.item}}</a>
+                <div class="p">
+                  <p>item: Atividades esportivas e artisticas</p>
+                  <p>pontos por semestre: 5 pontos</p>
+                </div>                  
+              </td>
+              <td>{{document.period}}</td>
+              <td>{{document.score}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="footer-table">
+        <div class="pagination">
+          <span>&#10094;</span>
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>&#10095;</span>
+        </div>
       </div>
     </div>
   </div>
@@ -320,14 +320,14 @@
     el: '#app',
     data: {
       documents: [
-        {id: 0, student:'a1694111', name: 'rotaract', item: 'I', group: 2, period: '2 semes.', score: 4},
-        {id: 1, student:'a169434', name: 'atividade group 1', group: 1, period: '3 semes.', item: 'I', score: 5},
-        {id: 2, student:'a167434', name: 'atividade esportiva', group: 3, period: '4 semes.', item: 'II', score: 4},
-        {id: 3, student:'a169434', name: 'música', group: 1, period: '2 horas', item: 'III', score: 5},
-        {id: 4, student:'a1694111', name: 'teatro', group: 2, period: '18 horas', item: 'III', score: 4},
-        {id: 5, student:'a1694156', name: 'ouros da casa', group: 3, period: '5 semes', item: 'I', score: 5},
-        {id: 6, student:'a1994111', name: 'iniciação cientifica', group: 2, period: '6 semes', item: 'II', score: 4},
-        {id: 7, student:'a169434', name: 'atividade 8', group: 1, period: '60 horas', item: 'III', score: 5}
+        {id: 0,  name: 'rotaract', item: 'I', group: 2, period: '2 semes.', score: 4},
+        {id: 1,  name: 'atividade group 1', group: 1, period: '3 semes.', item: 'I', score: 5},
+        {id: 2,  name: 'atividade esportiva', group: 3, period: '4 semes.', item: 'II', score: 4},
+        {id: 3,  name: 'música', group: 1, period: '2 horas', item: 'III', score: 5},
+        {id: 4,  name: 'teatro', group: 2, period: '18 horas', item: 'III', score: 4},
+        {id: 5,  name: 'ouros da casa', group: 3, period: '5 semes', item: 'I', score: 5},
+        {id: 6,  name: 'iniciação cientifica', group: 2, period: '6 semes', item: 'II', score: 4},
+        {id: 7,  name: 'atividade 8', group: 1, period: '60 horas', item: 'III', score: 5}
       ]
     }
   })
