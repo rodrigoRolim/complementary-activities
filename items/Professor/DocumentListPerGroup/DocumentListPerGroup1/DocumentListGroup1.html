@@ -15,12 +15,13 @@
      color: rgba(21, 116, 179, 0.692);
    }
    #entry-box{
-     width: 70%;
-     display: flex;
-     flex-direction: column;
-     align-items: flex-end;
-     margin: 0 auto;
-     
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2)
    }
    .pagination {
      padding-top: 20px;
@@ -45,7 +46,10 @@
    padding: 8px;
   }
   tbody tr {
-   border-bottom: 1px solid rgba(133, 198, 241, 0.692);
+   border-bottom: 1px solid rgba(126, 127, 128, 0.281);
+  }
+  tbody tr:hover {
+    background-color: #cbcccb0e;
   }
   td:hover{
    cursor: pointer;
@@ -143,6 +147,55 @@
     padding: 78px 0;
     align-items: center;
   }
+  .header-table, .footer-table {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+  }
+  .student-detail {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+  }
+  .search-sender {
+    align-self: center;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+  }
+  .name-group {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 40%;
+  }
+  .name-group h3{
+    font-weight: 500;
+    color: gray;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .search-sender input {
+    border-radius: 4px;
+    border: 1px solid #8d928d;
+    width: 90%;
+    padding: 8px 10px;
+  }
+  .photo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.0rem;
+    color: gray;
+    border: 1px solid;
+    padding: 30px;
+    border-radius: 100%;
+    margin-right: 10px;
+  }
   .documents {
     margin-top: 90px;
     display: flex;
@@ -195,7 +248,6 @@
     margin-left: 100px;
     display: flex;
     flex-direction: row;
-    
   }
   .informations {
     vertical-align: center;
@@ -209,11 +261,7 @@
     padding: 5px;
     color: rgb(9, 183, 206)
   }
-  .name-group h3{
-    font-weight: 500;
-    color: gray;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
+
  </style>
 </head>
 <body>
@@ -242,50 +290,47 @@
     </div>
   </nav>
   <div class="container">
-    <div class="name-group">
-        <h3>Grupo 1</h3>
-    </div>
-    <div class="perfil-aluno">
-        <div class="foto">
-          <span></span>
-        </div>
-        <div class="informations">
-          <p><strong>nome:</strong> <span>rodrigo rolim veras</span></p>
-          <p><strong>ra:</strong> <span>1694111</span></p>
-          <p><strong>curso:</strong> <span>engenharia de software</span></p>
-        </div>
+    <div class="header-table">
+      <div class="student-detail">
+        <span class="photo"></span>
+        <p>rodrigo rolim veras</p>
+      </div>
+      <div class="name-group"><h3>Grupo x</h3></div>
+      <div class="search-sender">
+        <input type="text" placeholder="buscar">
+      </div>
     </div>
     <div id="entry-box">
-      <div class="search-sender">
-        <input type="text" placeholder="buscar por nome do documento">
-      </div>
      <div class="table">
-      <table id="app">
-       <thead>
-        <tr>
-         <th>Nome</th>
-         <th>Item</th>
-         <th>Período</th>
-         <th>Pontos</th>
-        </tr>
-       </thead>
-       <tbody>
-        <tr v-key:document.id title="visualizar documento" v-for="document in documents">
-          <td>{{document.name}}</td>
-          <td><a  title="ver item">{{document.item}}</a></td>
-          <td>{{document.period}}</td>
-          <td>{{document.score}}</td>
-        </tr>
-       </tbody>
-      </table>
+        <table id="app">
+        <thead>
+          <tr>
+          <th>Nome</th>
+          <th>Item</th>
+          <th>Período</th>
+          <th>Pontos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-key:document.id title="visualizar documento" v-for="document in documents">
+            <td>{{document.name}}</td>
+            <td><a  title="ver item">{{document.item}}</a></td>
+            <td>{{document.period}}</td>
+            <td>{{document.score}}</td>
+          </tr>
+        </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="footer-table">
       <div class="pagination">
         <span>&#10094;</span>
         <span>1</span>
         <span>2</span>
+        <span>3</span>
         <span>&#10095;</span>
       </div>
-    </div>
-  </div>
+      </div>
   </div>
   <footer>
     <p>eu sou o rodape</p>
