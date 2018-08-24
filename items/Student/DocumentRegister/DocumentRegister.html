@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+ <title>Document</title>
+ <style>
+
+  .header {
+    border-bottom: 1px solid rgba(133, 198, 241, 0.692);
+    line-height: 1;
+    background-color: rgb(255, 255, 255);
+    padding: 8px 0px;
+    display: flex;
+    flex-direction: row;
+  }
+  body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Arial, sans-serif;
+    font-weight: 400;
+  }
+  .painel {
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    align-self: flex-end;
+    margin-right: 25px;
+  }
+  .logo {
+    border: 1px solid #7e7e7e;
+    border-radius: 100%;
+    padding: 25px;
+    align-self: center;
+  }
+  .menu {
+    align-self: center;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+  }
+
+  .not, .fol {
+    color: 	rgba(0, 119, 255, 0.986);  
+    cursor: pointer;
+  }
+  .not {
+   background-color: #edf03a5e;
+   border: 1px solid #edf03a;
+   border-radius: 4px;
+   padding: 5px 8px;
+  }
+  .fol {
+    border: 1px solid;
+    border-radius: 4px;
+    background-color: #3accf05e;
+    padding: 5px 8px;
+    margin-left: 10px;
+  }
+  .not .material-icons, .fol .material-icons {
+   
+    font-size: 1.5rem;
+  }
+  .fol .material-icons {
+    color: white
+  }
+  .not  .material-icons {
+    color: white;
+  }
+  .logout {
+   align-self: center;
+   width: 80%;
+  }
+  .logout button {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 8px;
+    margin-left: 100px;
+    background-color:#f03a685e;
+    border: 1px solid #f03a67; 
+    color: white;
+    border-radius: 4px;
+  }
+  .rot-logout {
+    align-self: center;
+  }
+  footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 10px 0px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(196, 192, 192, 0.03);
+    align-items: center;
+    padding: 100px 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  form {
+   display: flex;
+   flex-direction: column;
+   align-content: space-around;
+   background-color: white;
+   box-sizing: border-box;
+   width: 70%;
+   border: 1px solid transparent;
+   padding: 50px;
+   box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5)
+  }
+  .form-set {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   padding: 10px;
+  }
+  .form-set input,
+  .form-set select,
+  .input-score input,
+  .input-file input {
+   margin-top: 5px;
+   padding: 8px 15px;
+   border-radius: 4px;
+   border: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  .input-file input {
+   width: 100%;
+  }
+  .form-set-sc-doc {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: space-between;
+  }
+  .input-score, .input-file {
+    display: flex;
+    flex-direction: column;
+  }
+  .actions-form button {
+   background-color:#3F69AA;
+   color: white;
+   border: 1px solid transparent;
+   padding: 10px 18px;
+   border-radius: 2px;
+   cursor: pointer;
+  }
+  .actions-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-self: flex-end;
+    margin-top: 50px;
+  }
+ </style>
+</head>
+<body>
+  <nav class="header">
+    <div class="logout">
+        <button>
+          <i class="material-icons">
+            exit_to_app
+          </i> <span class="rot-logout">Logout</span>
+        </button>
+    </div>
+    <div class="painel">
+      <div class="menu">
+          <span class="not">
+           <i class="material-icons">
+            home
+           </i>
+          </span>
+          <span class="fol" title="novo documento">
+            <i class="material-icons">
+              cloud_upload
+            </i>
+          </span>
+      </div>
+      <span class="logo"></span>
+    </div>
+  </nav>
+  <div class="container">
+    <form>
+      <div class="form-set">
+        <label for="">nome do documento</label>
+        <input type="text">
+      </div>
+      <div class="form-set">
+        <label for="">grupo</label>
+        <select name="" id="">
+          <option value="1">GRUPO 1 - Atividades de complementação da formação social, humana e cultural</option>
+          <option value="2">GRUPO 2 - Atividades de cunho comunitário e de interesse coletivo</option>
+          <option value="3">GRUPO 3 - Atividades de iniciação científica, tecnológica e de formação profissional
+            </option>
+        </select>
+      </div>
+      <div class="form-set">
+        <label for="">item</label>
+        <select name="" id="">
+          <option value=""></option>
+        </select>
+      </div>
+      <div class="form-set-sc-doc">
+        <div class="input-file">
+          <label for="">Carregue o documento</label>
+          <input type="file">
+        </div>
+        <div class="input-score">
+          <label for="">pontos</label>
+          <input type="number">
+        </div>
+      </div>
+      <div class="actions-form">
+        <button>salvar</button>
+      </div>
+    </form>
+  </div>
+  <footer>
+    <p>eu sou o rodape</p>
+  </footer>
+</body>
+<script>
+  var documents = new Vue({
+    el: '.container',
+    data: {
+    }
+  })
+</script>
+</html>
