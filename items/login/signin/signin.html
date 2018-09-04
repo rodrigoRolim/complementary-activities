@@ -9,15 +9,15 @@
       rel="stylesheet">
  <title>Document</title>
  <style>
-  .header { 
+  /* .header { 
     border-bottom: 1px solid rgba(133, 198, 241, 0.692);
     line-height: 1;
     padding: 8px 0px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-  }
-  .actions-nav {
+  } */
+  /* .actions-nav {
     align-self: flex-end;
     display: flex;
     flex-direction: row;
@@ -32,10 +32,10 @@
     color: white;
     font-weight: 400;
     cursor: pointer;
-  }
-  .entry {
+  } */
+  /* .entry {
     margin-right: 10px;
-  }
+  } */
   body {
    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
    font-size: 100%;
@@ -57,7 +57,7 @@
    box-sizing: border-box;
    width: 30%;
    border: 1px solid transparent;
-   padding: 50px;
+   padding: 40px;
    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5)
   }
   [class*="form-row"] {
@@ -66,6 +66,7 @@
    justify-content: space-between;
    width: 100%;
   }
+
   .form-row .actions {
    align-self: flex-end;
   }
@@ -107,20 +108,23 @@
    color: rgb(111, 191, 216);
    margin-right: 10px;
   }
+  h3 {
+    font-weight: 100;
+    align-self: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
  </style>
 </head>
 <body>
-  <nav class="header">
-   <div class="actions-nav">
-    <button class="entry">cadastrar</button>
-    <button>entrar</button>
-   </div>
-  </nav>
+  
  <div class="container-login" id="login">
+
   <form class="form-login" method="post">
+   <h3>Aluno</h4>
    <div class="form-row-name">
      <div class="input-label">
-       <label for="username">usuário</label>
+       <label for="username">Registro acadêmico</label>
        <input type="text" name="username" id="username"/>
       </div>
    </div>
