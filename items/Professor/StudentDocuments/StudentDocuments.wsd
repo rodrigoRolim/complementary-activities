@@ -1,0 +1,43 @@
+@startuml
+Class Document {
+ integer id
+ String name
+ Date create
+ Group group
+ Student student
+ integer score
+}
+Class DocumentPersistency {
+ void crud()
+}
+Class Student {
+ integer ra
+ String name
+ String email
+ String password
+}
+Class StudentPersistency {
+  void crud()
+}
+Class Group {
+ integer id
+ String name
+}
+Class Item {
+  integer id
+  String name
+}
+Class GroupPersistency {
+  void crud()
+}
+Class ItemPersistency {
+  void crud()
+}
+Document - Group: belong >
+Item -- Group: belong >
+GroupPersistency ..> Group
+DocumentPersistency ..> Document
+ItemPersistency ..> Item
+Document -- Student: association >
+StudentPersistency ...> Student
+@enduml
