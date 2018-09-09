@@ -1,0 +1,13 @@
+@startuml
+Class Professor {
+ string name
+ string email
+ string username
+ string password
+ string courseResponsability
+}
+Class ProfessorPersistency {
+ void crud()
+}
+ProfessorPersistency ..> Professor
+@enduml
