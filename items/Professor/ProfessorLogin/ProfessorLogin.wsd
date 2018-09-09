@@ -1,0 +1,9 @@
+@startuml
+Class Professor {
+ string name
+ string email
+ string username
+ string password
+ string courseResponsability
+}
+@enduml
