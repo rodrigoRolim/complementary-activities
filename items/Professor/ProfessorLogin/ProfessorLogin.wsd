@@ -6,4 +6,8 @@ Class Professor {
  string password
  string courseResponsability
 }
+Class ProfessorPersistency {
+ void crud()
+}
+ProfessorPersistency ..> Professor
 @enduml
