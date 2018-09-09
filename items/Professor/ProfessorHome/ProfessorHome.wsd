@@ -9,7 +9,7 @@ Class Document {
 Class DocumentPersistency {
  void crud()
 }
-Class Student{
+Class Student {
  integer ra
  String name
  String email
