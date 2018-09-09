@@ -22,12 +22,21 @@ Class Group {
  integer id
  String name
 }
+Class Item {
+  integer id
+  String name
+}
 Class GroupPersistency {
   void crud()
 }
+Class ItemPersistency {
+  void crud()
+}
 Document - Group: belong >
-GroupPersistency -- Group
+Item -- Group: belong >
+GroupPersistency ..> Group
 DocumentPersistency ..> Document
+ItemPersistency ..> Item
 Document -- Student: association >
 StudentPersistency ...> Student
 @enduml
