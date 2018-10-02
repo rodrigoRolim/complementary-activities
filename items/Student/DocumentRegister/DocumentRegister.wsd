@@ -1,0 +1,9 @@
+@startuml
+class Aluno {
+
+}
+class Documento {
+
+}
+Documento --o Aluno
+@enduml
