@@ -1,0 +1,11 @@
+{
+    "name": "String",
+    "ra": "number",
+    "course": "String",
+    "documents": [{
+      "description": "String",
+      "group": "number",
+      "item": "number",
+      "score": "number"
+    }]
+}

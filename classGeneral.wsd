@@ -1,0 +1,11 @@
+@startuml
+class Student
+class Professor
+class Document
+class Group
+class Item
+
+Document o-- Group
+Group o-- Item
+Student o-- Document
+@enduml

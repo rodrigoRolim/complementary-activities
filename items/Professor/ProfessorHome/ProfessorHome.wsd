@@ -7,9 +7,7 @@ Class Document {
  Student student
  integer score
 }
-Class DocumentPersistency {
- void crud()
-}
+
 Class Student {
  integer ra
  String name

@@ -1,0 +1,8 @@
+{
+    "description": "String",
+    "identify": "number",
+    "items": [{
+      "description": "String",
+      "identify": "number"
+    }]
+  }
